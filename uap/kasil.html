@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kasir</title>
+    </head>
+
+    <style>
+        tr {
+            text-align: center;
+        }
+    </style>
+
+    <body>
+        <div class="my-data">
+            <table>
+                <tr>
+                    <th>Kode</th>
+                    <th>Nama Barang</th>
+                    <th>Harga</th>
+                </tr>
+                
+                <tr>
+                    <td id="kode-1">001</td>
+                    <td>A</td>
+                    <td id="h-1">10.000</td>
+                </tr>
+    
+                <tr>
+                    <td id="kode-2">002</td>
+                    <td>B</td>
+                    <td id="h-2">20.000</td>
+                </tr>
+    
+                <tr>
+                    <td id="kode-3">003</td>
+                    <td>C</td>
+                    <td id="h-3">30.000</td>
+                </tr>
+            </table>
+        </div>
+
+        <br>
+        
+        <div class="my-table">
+            <label for="ucode">Masukkan Kode: </label>
+            <input type="text" id="ucode" placeholder="Kode Barang"><br><br>
+            
+            <label for="jumlah">Jumlah Barang: </label>
+            <input type="text" id="total" placeholder="Jumlah"><br><br>
+            <input type="button" onclick="proc()" value="submit">
+        </div>
+    </body>
+
+    <script>
+        function proc() {
+            var x = document.getElementById("ucode");
+            var y = parseFloat(document.getElementById('total'));
+            
+            if ($x == "001") {
+                let x_price1 = parseFloat(document.getElementById("h-1"));
+                window.alert("Total Pembayaran: ", $x_price1*$y);
+                get_money = parseFloat(window.prompt("Masukkan uang anda: "));
+                window.alert("Kembalian anda: ", $get_money - ($x_price1*$y));
+            
+            } else if ($x == "002") {
+                let x_price2 = parseFloat(document.getElementById("h-2"));
+                window.alert("Total Pembayaran: ", $x_price2*$y);
+                get_money = parseFloat(window.prompt("Masukkan uang anda: "));
+                window.alert("Kembalian anda: ", $get_money - ($x_price2*$y));
+
+            } else if ($x == "003") {
+                let x_price3 = parseFloat(document.getElementById("h-3"));
+                window.alert("Total Pembayaran: ", $x_price3*$y);
+                get_money = parseFloat(window.prompt("Masukkan uang anda: "));
+                window.alert("Kembalian anda: ", $get_money - ($x_price3*$y));
+            }
+        }
+    </script>
+</html>
